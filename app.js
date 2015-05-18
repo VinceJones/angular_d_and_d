@@ -5,10 +5,26 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose');
+var Player = require('./models/player');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+// Mongo setup
+
+var mongoURI = "mongodb://localhost:27017/dungeons_characters";
+var MongoDB = mongoose.connect(mongoURI).connection;
+
+MongoDB.on('error', function (err) {
+  console.log('mongodb connection error', err);
+});
+
+MongoDB.once('open', function () {
+  console.log('mongodb connection open');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

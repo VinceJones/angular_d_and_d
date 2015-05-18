@@ -7,7 +7,7 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>*/\n'
             },
             build: {
-                src: 'client/app.js',
+                src: 'client/scripts/app.js',
                 dest: 'public/javascripts/app.min.js'
             }
         },
@@ -29,10 +29,20 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: "node_modules/",
                         src: [
-                            "angular/angular.js",
+                            "angular/angular.min.js",
+                            "angular/angular.min.js.map",
                             "angular/angular-csp.css"
                         ],
                         "dest": "public/vendors"
+                    },
+                    {
+                        expand: true,
+                        cwd: "client/",
+                        src: [
+                            "views/getStats.html",
+
+                        ],
+                        "dest": "public/"
                     },
                 ]
             }
