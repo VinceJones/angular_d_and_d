@@ -1,0 +1,56 @@
+<div class="container" ng-controller="GetStats">
+    <div class="col-md-offset-1">
+        <form class="form-horizontal">
+
+             <!--Strength input-->
+            <div class="form-group">
+                <label for="str" class="col-lg-2">STR:</label>
+                <div class="col-lg-10">
+                    <input ng-model="str" type="text" class="form-control" id="str">
+                </div>
+            </div>
+
+            <!--Dexerity input-->
+            <div class="form-group">
+                <label for="dex" class="col-lg-2">DEX:</label>
+                <div class="col-lg-10">
+                    <input ng-model="dex" type="text" class="form-control" id="dex">
+                </div>
+            </div>
+
+            <!--Constitution input-->
+            <div class="form-group">
+                <label for="con" class="col-lg-2">CON:</label>
+                <div class="col-lg-10">
+                    <input ng-model="con" type="text" class="form-control" id="con">
+                </div>
+            </div>
+
+            <!--Intelligence input-->
+            <div class="form-group">
+                <label for="inte" class="col-lg-2">INT:</label>
+                <div class="col-lg-10">
+                    <input ng-model="inte" type="text" class="form-control" id="inte">
+                </div>
+            </div>
+
+            <!--Wisdom input-->
+            <div class="form-group">
+                <label for="wis" class="col-lg-2">WIS:</label>
+                <div class="col-lg-10">
+                    <input ng-model="wis" type="text" class="form-control" id="wis">
+                </div>
+            </div>
+
+            <!--Charisma input-->
+            <div class="form-group">
+                <label for="cha" class="col-lg-2">CHA:</label>
+                <div class="col-lg-10">
+                    <input ng-model="cha" type="text" class="form-control" id="cha">
+                </div>
+            </div>
+
+            <button ng-click="pullStats()" class="btn-lg btn-danger">Commit Stats</button>
+        </form>
+    </div>
+</div>
