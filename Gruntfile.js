@@ -40,6 +40,8 @@ module.exports = function(grunt) {
                         cwd: "client/",
                         src: [
                             "views/getStats.html",
+                            "styles/*"
+
 
                         ],
                         "dest": "public/"

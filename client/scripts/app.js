@@ -10,7 +10,6 @@ App.controller('GetStats', ["$scope", "$http", function($scope, $http){
             $scope.player = {};
             $scope.allStats = response.data;
             console.log($scope.allStats);
-            console.log("inside length: ", $scope.allStats.length);
             return $scope.allStats.data;
         });
     };
@@ -19,6 +18,10 @@ App.controller('GetStats', ["$scope", "$http", function($scope, $http){
         return $http.post('/users/add', player).then(getAllStats());
     };
 
+    $scope.delete = function(player) {
+        console.log("DELETE: ", player);
+        return $http.delete('/users/'+player._id, player).then(getAllStats());
+    };
+
     getAllStats();
-    console.log("Outside: ",$scope.allStats);
 }]);

@@ -5,23 +5,31 @@
     <title>D&D Stats</title>
 
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles/bootstrap.cyborg.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     <header class="container jumbotron">
-        <h1>D&D</h1>
+        <h1>D&D Character Building</h1>
     </header>
     <div ng-controller="GetStats">
-        <div ng-include="'/views/getStats.html'" class="col-md-6 col-md-offset-1"></div>
+        <div ng-include="'/views/getStats.html'" class="inputStats col-md-5 col-md-offset-1"></div>
 
-    <div class="col-md-2">
+    <div class="players col-md-3">
         <h4 class="lead"># of Character: {{allStats.length}}</h4>
         <ul>
-            <li ng-repeat="player in allStats">STR:{{player.str}}</li>
-            <li ng-repeat="player in allStats">DEX:{{player.dex}}</li>
-            <li ng-repeat="player in allStats">CON:{{player.con}}</li>
-            <li ng-repeat="player in allStats">INT:{{player.inte}}</li>
-            <li ng-repeat="player in allStats">WIS:{{player.wis}}</li>
-            <li ng-repeat="player in allStats">CHA:{{player.cha}}</li>
+            <li ng-repeat="player in allStats">
+                Name:{{player.name}}<br>
+                Class:{{player.class}}<br>
+                STR:{{player.str}}<br>
+                DEX:{{player.dex}}<br>
+                CON:{{player.con}}<br>
+                INT:{{player.inte}}<br>
+                WIS:{{player.wis}}<br>
+                CHA:{{player.cha}}<br>
+                <button ng-click="delete(player)" class="btn btn-warning btn-sm removePlayer">Remove</button>
+                <br><br>
+            </li>
         </ul>
     </div>
     </div>
@@ -30,3 +38,15 @@
     <script type="text/javascript" src="/javascripts/app.min.js"></script>
 </body>
 </html>
+
+
+<!--<li ng-repeat="player in allStats">Name:{{player.name}}</li>
+            <li ng-repeat="player in allStats">Class:{{player.class}}</li>
+            <li ng-repeat="player in allStats">STR:{{player.str}}</li>
+            <li ng-repeat="player in allStats">DEX:{{player.dex}}</li>
+            <li ng-repeat="player in allStats">CON:{{player.con}}</li>
+            <li ng-repeat="player in allStats">INT:{{player.inte}}</li>
+            <li ng-repeat="player in allStats">WIS:{{player.wis}}</li>
+            <li ng-repeat="player in allStats">CHA:{{player.cha}}</li>
+            <li><button ng-click="delete(player)" class="btn btn-warning btn-sm removePlayer">Remove</button></li>
+            <li></li>-->

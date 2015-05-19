@@ -18,4 +18,11 @@ router.post('/add', function(req, res, next){
     });
 });
 
+router.delete('/:id', function(req, res, next) {
+        Player.findByIdAndRemove(req.params.id, req.body, function (err, Player) {
+            if (err) return next(err);
+            res.json(Player);
+        });
+});
+
 module.exports = router;

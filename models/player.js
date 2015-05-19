@@ -2,6 +2,8 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var PlayerSchema = new Schema({
+    name: String,
+    class: String,
     str: Number,
     dex: Number,
     con: Number,
