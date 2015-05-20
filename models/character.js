@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var PlayerSchema = new Schema({
+var CharacterSchema = new Schema({
     name: String,
     class: String,
     str: Number,
@@ -12,4 +12,4 @@ var PlayerSchema = new Schema({
     cha: Number
 });
 
-module.exports = mongoose.model('Players', PlayerSchema);
+module.exports = mongoose.model('Characters', CharacterSchema);

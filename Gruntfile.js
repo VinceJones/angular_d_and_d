@@ -37,12 +37,28 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
+                        cwd: "node_modules/",
+                        src: [
+                            "jquery/dist/jquery.min.js",
+                            "jquery/dist/jquery.min.map"
+                        ],
+                        "dest": "public/vendors"
+                    },
+                    {
+                        expand: true,
+                        cwd: "node_modules/",
+                        src: [
+                            "angular-animate/angular-animate.min.js",
+                            "angular-animate/angular-animate.min.js.map",
+                        ],
+                        "dest": "public/vendors"
+                    },
+                    {
+                        expand: true,
                         cwd: "client/",
                         src: [
-                            "views/getStats.html",
+                            "views/*",
                             "styles/*"
-
-
                         ],
                         "dest": "public/"
                     },

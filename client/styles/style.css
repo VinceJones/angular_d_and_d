@@ -16,3 +16,27 @@ li {
     background-color: #00f02a;
     color: #000000;
 }
+
+.updatePlayerStats {
+    padding: 5px 5px 5px 20px;
+    background-color: #22e3f7;
+    color: #000000;
+}
+
+/*************************************************/
+/* The starting CSS styles for the enter animation */
+
+.updateShow.ng-enter {
+    transition:0.5s linear all;
+    opacity:0;
+}
+
+.updateShow.ng-enter.ng-enter-active {
+    transition:0.5s linear all;
+    opacity:1;
+}
+
+.updateShow.ng-hide {
+    transition:0.5s linear all;
+    opacity:0;
+}

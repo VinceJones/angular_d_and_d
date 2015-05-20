@@ -1,4 +1,4 @@
-var App = angular.module('App', []);
+var App = angular.module('App', ['ngAnimate']);
 
 App.controller('GetStats', ["$scope", "$http", function($scope, $http){
     $scope.player = {};
@@ -9,13 +9,20 @@ App.controller('GetStats', ["$scope", "$http", function($scope, $http){
 
             $scope.player = {};
             $scope.allStats = response.data;
-            console.log($scope.allStats);
-            return $scope.allStats.data;
+
+            console.log($scope.allStats.characters);
+            return $scope.allStats;
         });
     };
 
     $scope.add = function(player) {
         return $http.post('/users/add', player).then(getAllStats());
+    };
+
+    $scope.update = function(player) {
+        console.log("allStats: ", $scope.allStats);
+        console.log("UPDATE: ", player);
+        return $http.put('/users/'+player._id, player).then(getAllStats());
     };
 
     $scope.delete = function(player) {

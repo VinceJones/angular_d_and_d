@@ -1,0 +1,84 @@
+<div class="col-sm-offset-1">
+    <form class="form-horizontal">
+        <legend>Input Stats</legend>
+
+        <!--Name input-->
+        <div class="form-group">
+            <div class="col-sm-4">
+                <input ng-model="player.name" type="text" class="form-control" id="name" value="player.name">
+            </div>
+            <label for="name" class="col-sm-1">{{player.name}}</label>
+        </div>
+
+        <div class="form-group">
+            <p class="lead">Choose a Class</p>
+            <div>
+                <input type="radio" ng-model="player.class" value="Barbarian"> Barbarian
+                <input type="radio" ng-model="player.class" value="Bard"> Bard
+                <input type="radio" ng-model="player.class" value="Cleric"> Cleric
+                <input type="radio" ng-model="player.class" value="Druid"> Druid
+                <input type="radio" ng-model="player.class" value="Fighter"> Fighter <br>
+                <input type="radio" ng-model="player.class" value="Monk"> Monk
+                <input type="radio" ng-model="player.class" value="Ranger"> Ranger
+                <input type="radio" ng-model="player.class" value="Rogue"> Rogue
+                <input type="radio" ng-model="player.class" value="Wizard"> Wizard
+            </div>
+        </div>
+
+        <!--Strength input-->
+        <div class="form-group">
+            <label for="str" class="col-sm-1">STR: </label>
+            <div class="col-sm-3">
+                <input ng-model="player.str" type="number" class="form-control" id="str" placeholder="10">
+            </div>
+            {{player.str}}
+        </div>
+
+        <!--Dexerity input-->
+        <div class="form-group">
+            <label for="dex" class="col-sm-1">DEX: </label>
+            <div class="col-sm-3">
+                <input ng-model="player.dex" type="number" class="form-control" id="dex" placeholder="10">
+            </div>
+            {{player.dex}}
+        </div>
+
+        <!--Constitution input-->
+        <div class="form-group">
+            <label for="con" class="col-sm-1">CON: </label>
+            <div class="col-sm-3">
+                <input ng-model="player.con" type="number" class="form-control" id="con" placeholder="10">
+            </div>
+            {{player.con}}
+        </div>
+
+        <!--Intelligence input-->
+        <div class="form-group">
+            <label for="inte" class="col-sm-1">INT: </label>
+            <div class="col-sm-3">
+                <input ng-model="player.inte" type="number" class="form-control" id="inte" placeholder="10">
+            </div>
+            {{player.inte}}
+        </div>
+
+        <!--Wisdom input-->
+        <div class="form-group">
+            <label for="wis" class="col-sm-1">WIS: </label>
+            <div class="col-sm-3">
+                <input ng-model="player.wis" type="number" class="form-control" id="wis" placeholder="10">
+            </div>
+            {{player.wis}}
+        </div>
+
+        <!--Charisma input-->
+        <div class="form-group">
+            <label for="cha" class="col-sm-1">CHA: </label>
+            <div class="col-sm-3">
+                <input ng-model="player.cha" type="number" class="form-control" id="cha" placeholder="10">
+            </div>
+            {{player.cha}}
+        </div>
+
+        <button ng-click="update(player)" class="btn-lg btn-info">Commit Stats</button>
+    </form>
+</div>
